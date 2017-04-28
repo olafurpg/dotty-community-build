@@ -79,8 +79,12 @@ abstract class CommunityProjectTest(project: CommunityProject) {
   }
 }
 
-class Scalatest extends CommunityProjectTest(CommunityProject("scalatest"))
+class Scalatest
+    extends CommunityProjectTest(
+      CommunityProject("scalatest", List("scalatest/compile")))
 
 class Squants extends CommunityProjectTest(CommunityProject("squants"))
 
-class Algebra extends CommunityProjectTest(CommunityProject("algebra", List("coreJVM/compile")))
+class Algebra
+    extends CommunityProjectTest(
+      CommunityProject("algebra", List("coreJVM/compile")))
